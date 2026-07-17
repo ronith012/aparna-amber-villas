@@ -91,7 +91,3 @@ All in `script.js`:
 - **Scroll speed** — `wheelMultiplier` / `touchMultiplier` in the `Lenis` config control how far a given scroll gesture moves the video; `duration` controls how long it takes to ease to a stop.
 - **Seek smoothness** — the `0.12` lerp factor in `render()` controls how eagerly `currentTime` chases the scroll target; lower is smoother but laggier.
 - **Scroll track length** — `--track-vh` in `styles.css` sets the total scrollable distance for the whole video; longer means slower perceived pacing for the same footage.
-
-## Credits
-
-Concept film by IMPACT 3D. This site is an independent scroll experience built around that footage for illustrative/demo purposes.

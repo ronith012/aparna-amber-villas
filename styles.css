@@ -199,6 +199,10 @@ body{
 }
 
 /* ---------- captions ---------- */
+/* Bottom-anchored at every breakpoint on purpose: the source video's own
+   baked-in title text (the intro sequence) sits vertically centered in
+   frame, so our captions need to stay clear of that band rather than
+   competing with it there. */
 .captions{
   position:absolute;
   inset:0;
@@ -209,7 +213,7 @@ body{
   padding:0 6vw 14vh;
 }
 @media (min-width:760px){
-  .captions{align-items:center;padding:0 8vw;}
+  .captions{padding:0 8vw 12vh;}
 }
 
 .caption{
