@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Aparna Amber Villas — A Walkthrough</title>
+<meta name="description" content="Enter a world of vibrant colors and endless calm. A scroll-driven walkthrough of Aparna Amber Villas, Hyderabad.">
+<link rel="preload" as="image" href="media/poster.jpg">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap');
+</style>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="loader">
+    <div class="loader-mark">AMBER</div>
+    <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+    <div class="loader-pct" id="loaderPct">0%</div>
+  </div>
+
+  <div id="scroll-track">
+
+    <div id="stage">
+      <video id="film" muted playsinline preload="auto" poster="media/poster.jpg">
+        <source src="media/walkthrough.mp4" type="video/mp4" media="(min-width: 800px)">
+        <source src="media/walkthrough-mobile.mp4" type="video/mp4">
+      </video>
+      <div class="grain"></div>
+      <div class="vignette"></div>
+
+      <header class="brandbar">
+        <span class="brand">Amber Villas</span>
+        <span class="tag">by Aparna &middot; Hyderabad</span>
+      </header>
+
+      <div class="scrollcue" id="scrollcue">
+        <span>Scroll to begin</span>
+        <div class="cue-line"><div class="cue-dot"></div></div>
+      </div>
+
+      <div class="progress-rail">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <nav class="phase-dots" id="phaseDots"></nav>
+
+      <div class="captions" id="captions"></div>
+    </div>
+
+  </div>
+
+  <section id="finale">
+    <div class="finale-inner">
+      <p class="finale-kicker">Aparna Amber Villas</p>
+      <h2>A community, thoughtfully planned.<br>A home, endlessly calm.</h2>
+      <p class="finale-copy">Jacaranda-lined avenues, private clubhouses, and a masterplan built around quiet, considered living — set in the heart of Hyderabad.</p>
+      <button class="cta" id="ctaBtn">Schedule a Visit</button>
+      <p class="finale-fine">Concept film by IMPACT 3D · Site experience for illustrative purposes</p>
+    </div>
+  </section>
+
+  <script src="vendor/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
