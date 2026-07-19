@@ -5,13 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Aparna Amber Villas — A Walkthrough</title>
 <meta name="description" content="Enter a world of vibrant colors and endless calm. A scroll-driven walkthrough of Aparna Amber Villas, Hyderabad.">
+<meta name="theme-color" content="#0a0a08">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aparna Amber Villas — A Walkthrough">
+<meta property="og:description" content="Enter a world of vibrant colors and endless calm. A scroll-driven cinematic walkthrough of Aparna Amber Villas, Hyderabad.">
+<meta property="og:image" content="media/poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aparna Amber Villas — A Walkthrough">
+<meta name="twitter:description" content="Enter a world of vibrant colors and endless calm. A scroll-driven cinematic walkthrough of Aparna Amber Villas, Hyderabad.">
+<meta name="twitter:image" content="media/poster.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a08'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='34' fill='%23c9a668' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+
 <link rel="preload" as="image" href="media/poster.jpg">
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap');
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
   <div id="loader">
     <div class="loader-mark">AMBER</div>
@@ -29,6 +45,11 @@
       <div class="grain"></div>
       <div class="vignette"></div>
 
+      <div class="video-fallback" id="videoFallback">
+        <p>The walkthrough film couldn't load. This can happen on a slow or interrupted connection.</p>
+        <button class="cta" id="videoRetry">Reload</button>
+      </div>
+
       <header class="brandbar">
         <span class="brand">Amber Villas</span>
         <span class="tag">by Aparna &middot; Hyderabad</span>
@@ -39,11 +60,10 @@
         <div class="cue-line"><div class="cue-dot"></div></div>
       </div>
 
-      <div class="progress-rail">
+      <nav class="progress-rail" id="progressRail">
         <div class="progress-fill" id="progressFill"></div>
-      </div>
-
-      <nav class="phase-dots" id="phaseDots"></nav>
+        <div class="rail-markers" id="railMarkers"></div>
+      </nav>
 
       <div class="captions" id="captions"></div>
     </div>
@@ -59,6 +79,31 @@
       <p class="finale-fine">Concept film by IMPACT 3D · Site experience for illustrative purposes</p>
     </div>
   </section>
+
+  <div id="visitModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <p class="finale-kicker">Aparna Amber Villas</p>
+      <h2 id="modalTitle">Schedule a Visit</h2>
+      <form id="visitForm">
+        <div class="field">
+          <input type="text" id="visitName" name="name" placeholder=" " required>
+          <label for="visitName">Name</label>
+        </div>
+        <div class="field">
+          <input type="tel" id="visitPhone" name="phone" placeholder=" " required>
+          <label for="visitPhone">Phone</label>
+        </div>
+        <div class="field">
+          <input type="email" id="visitEmail" name="email" placeholder=" ">
+          <label for="visitEmail">Email</label>
+        </div>
+        <button type="submit" class="cta">Request Callback</button>
+      </form>
+      <p class="modal-note" id="modalNote"></p>
+    </div>
+  </div>
 
   <script src="vendor/lenis.min.js"></script>
   <script src="script.js"></script>
